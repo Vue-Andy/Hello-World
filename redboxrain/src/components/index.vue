@@ -14,11 +14,9 @@
       <template v-for="(item, index) in liParams" v-show='isStarted && !isEnded'>
         <li :key="item.keyId" :style="{ left: item.left, animationDuration: item.durTime, webkitAnimationDuration: item.durTime}" 
             :class="item.cls" :data-index="index" @webkitAnimationEnd="removeDom" @touchstart='handleClick(item.couponId,$event)'>
-          <!-- <a href='javascript:;'> -->
           <div>
             <i class='redenvelope' :style="{ transform: item.transforms, webkitTransform: item.transforms}"></i>
           </div>
-          <!-- </a> -->
         </li>
       </template>
       <template v-if='isEnded'>
